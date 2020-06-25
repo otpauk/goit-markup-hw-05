@@ -221,7 +221,11 @@ img {
 .contacts.list .icon {
   margin-right: 10px;
 
-  transition: --color2 2500ms var(--timing-function);
+  color: #757575;
+  --color2: currentColor;
+
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 /* Зміна кольору контакту при наведенні (виділенні) */
@@ -232,7 +236,7 @@ img {
 
 .contacts.list .link:hover .icon,
 .contacts.list .link:focus .icon {
-  --color2: var(--accent-color);
+  color: var(--accent-color);
 }
 /* MENU END */
 
@@ -471,7 +475,11 @@ img {
   width: 20px;
   height: 20px;
 
-  transition: --color1 250ms var(--timing-function);
+  color: #afb1b8;
+  --color1: currentColor;
+
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .team-social .item:not(:last-child) {
@@ -481,7 +489,11 @@ img {
 .team-social .link:hover,
 .team-social .link:focus {
   background-color: var(--accent-color);
-  --color1: var(--primary-white-color);
+}
+
+.team-social .link:hover .icon,
+.team-social .link:focus .icon {
+  color: var(--primary-white-color);
 }
 /* TEAM END */
 
@@ -526,10 +538,22 @@ img {
   transition: border-color 250ms var(--timing-function);
 }
 
+.client-logo .icon {
+  color: #afb1b8;
+  --color1: currentColor;
+
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+}
+
 .client-logo:hover,
 .client-logo:focus {
   border-color: var(--accent-color);
-  --color1: var(--accent-color);
+}
+
+.client-logo:hover .icon,
+.client-logo:focus .icon {
+  color: var(--accent-color);
 }
 /* CLIENTS END */
 
